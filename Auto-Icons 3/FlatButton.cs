@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Extensions;
-using static Auto_Icons_3.Data;
 
 namespace Auto_Icons_3
 {
@@ -37,14 +36,14 @@ namespace Auto_Icons_3
 		private DesignMode[] designs = { Auto_Icons_3.DesignMode.Dark, Auto_Icons_3.DesignMode.Light, Auto_Icons_3.DesignMode.Dark };
 		private BorderStyle borderStyle = BorderStyle.Auto;
 
-		[Category("Design")]
+		[Category("FormDesign.Design")]
 		public PictureBoxSizeMode SizeMode { get => PB_Icon.SizeMode; set => PB_Icon.SizeMode = value; }
 		[Category("Appearance")]
 		public float? HueShade { get => hueShade; set => hueShade = value; }
-		[Category("Design")]
+		[Category("FormDesign.Design")]
 		public new BorderStyle BorderStyle { get => borderStyle; set => borderStyle = value; }
 		[Category("Appearance")]
-		public Image Image { get => PB_Icon.Image; set { PB_Icon.Image = value; Refresh(); } }
+		public Image Image { get => PB_Icon.Image; set { PB_Icon.Image = value; Refresh(FormDesign.Design); } }
 
 		public FlatButton()
 		{
@@ -98,8 +97,11 @@ namespace Auto_Icons_3
 			if (EnableGraphics && !ClickIdentifier.Disabled)
 			{
 				ClickIdentifier.Disable();
-				Click?.Invoke(this, e);
-				ClickIdentifier.Enable();
+				new Action(() => Invoke(new Action(() =>
+				{
+					Click?.Invoke(this, e);
+					ClickIdentifier.Enable();
+				}))).RunInBackground(5);
 			}
 		}
 
@@ -109,13 +111,13 @@ namespace Auto_Icons_3
 			MyButton_Resize(this, e);
 		}
 
-		public override void Refresh()
+		public void Refresh(FormDesign design)
 		{
-			switch (Design.ID)
+			switch (design.ID)
 			{
-				case 0: L_Label.ForeColor = Design.ForeColor.Tint(HueShade); BackColor = Design.LightColor.Tint(HueShade); break;
-				case 1: L_Label.ForeColor = Design.ForeColor.Tint(HueShade); BackColor = Design.LightColor.Tint(HueShade); break;
-				case 2: L_Label.ForeColor = Design.ForeColor.Tint(HueShade); BackColor = Design.TitleColor.Tint(Design.TitleColor, -2.5f).Tint(HueShade); break;
+				case 0: L_Label.ForeColor = design.ForeColor; BackColor = design.LightColor; break;
+				case 1: L_Label.ForeColor = design.ForeColor; BackColor = design.LightColor; break;
+				case 2: L_Label.ForeColor = design.ForeColor; BackColor = design.TitleColor.Tint(design.TitleColor, -2.5f); break;
 				default:
 					break;
 			}
@@ -134,11 +136,11 @@ namespace Auto_Icons_3
 		{
 			if (!EnableGraphics) return;
 
-			switch (Design.ID)
+			switch (FormDesign.Design.ID)
 			{
-				case 0: L_Label.ForeColor = Design.InfoColor.Tint(HueShade); BackColor = Design.DarkColor.Tint(HueShade); break;
-				case 1: L_Label.ForeColor = Design.InfoColor.Tint(HueShade); BackColor = Design.TitleColor.Tint(HueShade); break;
-				case 2: L_Label.ForeColor = Design.TitleForeColor.Tint(HueShade); BackColor = Design.LightColor.Tint(HueShade); break;
+				case 0: L_Label.ForeColor = FormDesign.Design.InfoColor.Tint(HueShade); BackColor = FormDesign.Design.DarkColor.Tint(HueShade); break;
+				case 1: L_Label.ForeColor = FormDesign.Design.InfoColor.Tint(HueShade); BackColor = FormDesign.Design.TitleColor.Tint(HueShade); break;
+				case 2: L_Label.ForeColor = FormDesign.Design.TitleForeColor.Tint(HueShade); BackColor = FormDesign.Design.LightColor.Tint(HueShade); break;
 				default:
 					break;
 			}
@@ -150,11 +152,11 @@ namespace Auto_Icons_3
 		{
 			if (!EnableGraphics) return;
 
-			switch (Design.ID)
+			switch (FormDesign.Design.ID)
 			{
-				case 0: L_Label.ForeColor = Design.ForeColor.Tint(HueShade); BackColor = Design.LightColor.Tint(HueShade); break;
-				case 1: L_Label.ForeColor = Design.ForeColor.Tint(HueShade); BackColor = Design.LightColor.Tint(HueShade); break;
-				case 2: L_Label.ForeColor = Design.ForeColor.Tint(HueShade); BackColor = Design.TitleColor.Tint(Design.TitleColor, -2.5f).Tint(HueShade); break;
+				case 0: L_Label.ForeColor = FormDesign.Design.ForeColor; BackColor = FormDesign.Design.LightColor; break;
+				case 1: L_Label.ForeColor = FormDesign.Design.ForeColor; BackColor = FormDesign.Design.LightColor; break;
+				case 2: L_Label.ForeColor = FormDesign.Design.ForeColor; BackColor = FormDesign.Design.TitleColor.Tint(FormDesign.Design.TitleColor, -2.5f); break;
 				default:
 					break;
 			}
@@ -166,11 +168,11 @@ namespace Auto_Icons_3
 		{
 			if (!EnableGraphics) return;
 
-			switch (Design.ID)
+			switch (FormDesign.Design.ID)
 			{
-				case 0: L_Label.ForeColor = Design.DarkColor.Tint(HueShade); BackColor = Design.ActiveColor.Tint(HueShade); break;
-				case 1: L_Label.ForeColor = Design.ForeColor.Tint(HueShade); BackColor = Design.ActiveColor.Tint(HueShade); break;
-				case 2: L_Label.ForeColor = Design.LightColor.Tint(HueShade); BackColor = Design.ActiveColor.Tint(HueShade); break;
+				case 0: L_Label.ForeColor = FormDesign.Design.DarkColor.Tint(HueShade); BackColor = FormDesign.Design.ActiveColor.Tint(HueShade); break;
+				case 1: L_Label.ForeColor = FormDesign.Design.ForeColor.Tint(HueShade); BackColor = FormDesign.Design.ActiveColor.Tint(HueShade); break;
+				case 2: L_Label.ForeColor = FormDesign.Design.LightColor.Tint(HueShade); BackColor = FormDesign.Design.ActiveColor.Tint(HueShade); break;
 				default:
 					break;
 			}
@@ -183,7 +185,8 @@ namespace Auto_Icons_3
 		private void MyButton_Load(object sender, EventArgs e)
 		{
 			MyButton_Resize(this, e);
-			Refresh();
+			FormDesign.DesignChanged += Refresh;
+			Refresh(FormDesign.Design);
 			ResetTimer.Elapsed += ResetTimer_Elapsed;
 		}
 
@@ -200,6 +203,6 @@ namespace Auto_Icons_3
 			lastParent = Parent;
 		}
 
-		private void Parent_BackColorChanged(object sender, EventArgs e) => Refresh();
+		private void Parent_BackColorChanged(object sender, EventArgs e) => Refresh(FormDesign.Design);
 	}
 }

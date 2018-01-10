@@ -49,6 +49,7 @@
 			this.PB_C_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.PB_C_0.TabIndex = 8;
 			this.PB_C_0.TabStop = false;
+			this.PB_C_0.Visible = false;
 			// 
 			// PB_C_1
 			// 
@@ -59,6 +60,7 @@
 			this.PB_C_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.PB_C_1.TabIndex = 9;
 			this.PB_C_1.TabStop = false;
+			this.PB_C_1.Visible = false;
 			// 
 			// PB_C_3
 			// 
@@ -69,6 +71,7 @@
 			this.PB_C_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.PB_C_3.TabIndex = 11;
 			this.PB_C_3.TabStop = false;
+			this.PB_C_3.Visible = false;
 			// 
 			// PB_C_2
 			// 
@@ -79,6 +82,7 @@
 			this.PB_C_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.PB_C_2.TabIndex = 10;
 			this.PB_C_2.TabStop = false;
+			this.PB_C_2.Visible = false;
 			// 
 			// P_Bar
 			// 
@@ -87,31 +91,31 @@
 			this.P_Bar.Name = "P_Bar";
 			this.P_Bar.Size = new System.Drawing.Size(158, 93);
 			this.P_Bar.TabIndex = 12;
+			this.P_Bar.Visible = false;
 			// 
 			// L_Perc
 			// 
 			this.L_Perc.AutoSize = true;
 			this.L_Perc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_Perc.ForeColor = System.Drawing.Color.White;
 			this.L_Perc.Location = new System.Drawing.Point(144, 38);
 			this.L_Perc.Name = "L_Perc";
 			this.L_Perc.Size = new System.Drawing.Size(36, 19);
 			this.L_Perc.TabIndex = 0;
 			this.L_Perc.Text = "0 %";
 			this.L_Perc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.L_Perc.Visible = false;
 			// 
 			// MyProgressBar
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.Controls.Add(this.L_Perc);
 			this.Controls.Add(this.PB_C_0);
 			this.Controls.Add(this.PB_C_1);
 			this.Controls.Add(this.PB_C_3);
 			this.Controls.Add(this.PB_C_2);
 			this.Controls.Add(this.P_Bar);
-			this.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-			this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
+			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.Name = "MyProgressBar";
 			this.Size = new System.Drawing.Size(182, 93);
 			this.Load += new System.EventHandler(this.RoundedPanel_Load);

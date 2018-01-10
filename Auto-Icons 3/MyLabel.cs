@@ -139,7 +139,11 @@ namespace Auto_Icons_3
 				Label.Font = new Font(Font, Bold ? FontStyle.Bold : FontStyle.Regular);
 			}
 			else
-			{ selected = false; MyLabel_MouseDown(null, null); selected = true; }
+			{
+				selected = false;
+				MyLabel_MouseDown(null, null);
+				selected = true;
+			}
 			if (IsPicture)
 				Icon.Image = (Icon.Image as Bitmap).Color(ForeColor);
 		}
@@ -162,19 +166,19 @@ namespace Auto_Icons_3
 			{
 				if (BringToFrontOnMouseDown)
 					BringToFront();
-				if (Parent != null && Parent.BackColor == Data.Design.LightColor)
+				if (Parent != null && Parent.BackColor == FormDesign.Design.LightColor)
 				{
 					if (activeColor != null)
-						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = (Data.Design.ID != 2 ? Data.Design.BackColor : Data.Design.DarkColor).Tint(ActiveColor());
+						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = (FormDesign.Design.ID != 2 ? FormDesign.Design.BackColor : FormDesign.Design.DarkColor).Tint(ActiveColor());
 					else
-						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = Data.Design.ID != 2 ? Data.Design.BackColor : Data.Design.DarkColor;
+						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = FormDesign.Design.ID != 2 ? FormDesign.Design.BackColor : FormDesign.Design.DarkColor;
 				}
 				else
 				{
 					if (activeColor != null)
-						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = (Data.Design.ID != 2 ? Data.Design.LightColor : Data.Design.DarkColor).Tint(ActiveColor());
+						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = (FormDesign.Design.ID != 2 ? FormDesign.Design.LightColor : FormDesign.Design.DarkColor).Tint(ActiveColor());
 					else
-						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = Data.Design.ID != 2 ? Data.Design.LightColor : Data.Design.DarkColor;
+						RoundedBack.BackColor = Label.BackColor = Icon.BackColor = FormDesign.Design.ID != 2 ? FormDesign.Design.LightColor : FormDesign.Design.DarkColor;
 				}
 			}
 		}

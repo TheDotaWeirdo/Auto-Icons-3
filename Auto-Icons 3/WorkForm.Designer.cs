@@ -28,23 +28,56 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkForm));
 			this.TLP_Main = new System.Windows.Forms.TableLayoutPanel();
 			this.P_Title = new System.Windows.Forms.Panel();
+			this.PB_Icon = new System.Windows.Forms.PictureBox();
 			this.P_WindowControls = new System.Windows.Forms.Panel();
+			this.B_Close = new System.Windows.Forms.PictureBox();
+			this.B_Max = new System.Windows.Forms.PictureBox();
+			this.B_Min = new System.Windows.Forms.PictureBox();
 			this.L_Title = new System.Windows.Forms.Label();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.myProgressBar1 = new Auto_Icons_3.MyProgressBar();
-			this.myProgressBar2 = new Auto_Icons_3.MyProgressBar();
-			this.myProgressBar3 = new Auto_Icons_3.MyProgressBar();
-			this.myProgressBar4 = new Auto_Icons_3.MyProgressBar();
-			this.flatButton1 = new Auto_Icons_3.FlatButton();
+			this.TLP_Content = new System.Windows.Forms.TableLayoutPanel();
+			this.TLP_Apply_Bar = new System.Windows.Forms.TableLayoutPanel();
+			this.PB_Final = new System.Windows.Forms.PictureBox();
+			this.TLP_SecondPass_Bar = new System.Windows.Forms.TableLayoutPanel();
+			this.PB_SecondPass = new System.Windows.Forms.PictureBox();
+			this.TLP_Folders_Bar = new System.Windows.Forms.TableLayoutPanel();
+			this.PB_Folders = new System.Windows.Forms.PictureBox();
+			this.TLP_Shortcuts_Bar = new System.Windows.Forms.TableLayoutPanel();
+			this.PB_Shortcuts = new System.Windows.Forms.PictureBox();
+			this.TLP_Shortcuts_Top = new System.Windows.Forms.TableLayoutPanel();
+			this.L_Shortcuts_Info = new System.Windows.Forms.Label();
+			this.L_Shortcuts = new System.Windows.Forms.Label();
+			this.TLP_Folders_Top = new System.Windows.Forms.TableLayoutPanel();
+			this.L_Folders_Info = new System.Windows.Forms.Label();
+			this.L_Folders = new System.Windows.Forms.Label();
+			this.TLP_Apply_Top = new System.Windows.Forms.TableLayoutPanel();
+			this.L_ApplyChanges_Info = new System.Windows.Forms.Label();
+			this.L_ApplyChanges = new System.Windows.Forms.Label();
+			this.TLP_SecondPass_Top = new System.Windows.Forms.TableLayoutPanel();
+			this.L_SecondPass_Info = new System.Windows.Forms.Label();
+			this.L_SecondPass = new System.Windows.Forms.Label();
 			this.TLP_Main.SuspendLayout();
 			this.P_Title.SuspendLayout();
-			this.tableLayoutPanel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.PB_Icon)).BeginInit();
+			this.P_WindowControls.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.B_Close)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.B_Max)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.B_Min)).BeginInit();
+			this.TLP_Content.SuspendLayout();
+			this.TLP_Apply_Bar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.PB_Final)).BeginInit();
+			this.TLP_SecondPass_Bar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.PB_SecondPass)).BeginInit();
+			this.TLP_Folders_Bar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.PB_Folders)).BeginInit();
+			this.TLP_Shortcuts_Bar.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.PB_Shortcuts)).BeginInit();
+			this.TLP_Shortcuts_Top.SuspendLayout();
+			this.TLP_Folders_Top.SuspendLayout();
+			this.TLP_Apply_Top.SuspendLayout();
+			this.TLP_SecondPass_Top.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// TLP_Main
@@ -53,7 +86,7 @@
 			this.TLP_Main.ColumnCount = 1;
 			this.TLP_Main.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.TLP_Main.Controls.Add(this.P_Title, 0, 0);
-			this.TLP_Main.Controls.Add(this.tableLayoutPanel1, 0, 1);
+			this.TLP_Main.Controls.Add(this.TLP_Content, 0, 1);
 			this.TLP_Main.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.TLP_Main.Location = new System.Drawing.Point(2, 2);
 			this.TLP_Main.Name = "TLP_Main";
@@ -66,192 +99,376 @@
 			// P_Title
 			// 
 			this.P_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(26)))), ((int)(((byte)(32)))));
+			this.P_Title.Controls.Add(this.PB_Icon);
 			this.P_Title.Controls.Add(this.P_WindowControls);
 			this.P_Title.Controls.Add(this.L_Title);
 			this.P_Title.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.P_Title.Location = new System.Drawing.Point(3, 3);
+			this.P_Title.Location = new System.Drawing.Point(0, 0);
+			this.P_Title.Margin = new System.Windows.Forms.Padding(0);
 			this.P_Title.Name = "P_Title";
-			this.P_Title.Size = new System.Drawing.Size(1132, 44);
+			this.P_Title.Size = new System.Drawing.Size(1138, 50);
 			this.P_Title.TabIndex = 0;
+			// 
+			// PB_Icon
+			// 
+			this.PB_Icon.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.PB_Icon.Image = global::Auto_Icons_3.Properties.Resources.GIF_Ring_W;
+			this.PB_Icon.Location = new System.Drawing.Point(2, 2);
+			this.PB_Icon.Name = "PB_Icon";
+			this.PB_Icon.Size = new System.Drawing.Size(28, 28);
+			this.PB_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.PB_Icon.TabIndex = 3;
+			this.PB_Icon.TabStop = false;
+			this.PB_Icon.Click += new System.EventHandler(this.PB_Icon_Click);
 			// 
 			// P_WindowControls
 			// 
 			this.P_WindowControls.AutoSize = true;
+			this.P_WindowControls.Controls.Add(this.B_Close);
+			this.P_WindowControls.Controls.Add(this.B_Max);
+			this.P_WindowControls.Controls.Add(this.B_Min);
 			this.P_WindowControls.Dock = System.Windows.Forms.DockStyle.Right;
-			this.P_WindowControls.Location = new System.Drawing.Point(1132, 0);
+			this.P_WindowControls.Location = new System.Drawing.Point(1056, 0);
 			this.P_WindowControls.Name = "P_WindowControls";
-			this.P_WindowControls.Size = new System.Drawing.Size(0, 44);
-			this.P_WindowControls.TabIndex = 1;
+			this.P_WindowControls.Size = new System.Drawing.Size(82, 50);
+			this.P_WindowControls.TabIndex = 2;
+			this.P_WindowControls.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+			// 
+			// B_Close
+			// 
+			this.B_Close.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.B_Close.Image = ((System.Drawing.Image)(resources.GetObject("B_Close.Image")));
+			this.B_Close.Location = new System.Drawing.Point(57, 3);
+			this.B_Close.Name = "B_Close";
+			this.B_Close.Size = new System.Drawing.Size(22, 22);
+			this.B_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.B_Close.TabIndex = 5;
+			this.B_Close.TabStop = false;
+			this.B_Close.Click += new System.EventHandler(this.B_Close_Click);
+			// 
+			// B_Max
+			// 
+			this.B_Max.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.B_Max.Image = ((System.Drawing.Image)(resources.GetObject("B_Max.Image")));
+			this.B_Max.Location = new System.Drawing.Point(30, 3);
+			this.B_Max.Name = "B_Max";
+			this.B_Max.Size = new System.Drawing.Size(22, 22);
+			this.B_Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.B_Max.TabIndex = 4;
+			this.B_Max.TabStop = false;
+			this.B_Max.Click += new System.EventHandler(this.B_Max_Click);
+			// 
+			// B_Min
+			// 
+			this.B_Min.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.B_Min.Image = ((System.Drawing.Image)(resources.GetObject("B_Min.Image")));
+			this.B_Min.Location = new System.Drawing.Point(3, 3);
+			this.B_Min.Name = "B_Min";
+			this.B_Min.Size = new System.Drawing.Size(22, 22);
+			this.B_Min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.B_Min.TabIndex = 3;
+			this.B_Min.TabStop = false;
+			this.B_Min.Click += new System.EventHandler(this.B_Min_Click);
 			// 
 			// L_Title
 			// 
 			this.L_Title.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.L_Title.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_Title.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.L_Title.Location = new System.Drawing.Point(0, 0);
 			this.L_Title.Name = "L_Title";
-			this.L_Title.Size = new System.Drawing.Size(1132, 44);
+			this.L_Title.Size = new System.Drawing.Size(1138, 50);
 			this.L_Title.TabIndex = 0;
-			this.L_Title.Text = "Auto-Icons";
+			this.L_Title.Text = "Loading Folders.. This might take a while.";
 			this.L_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.L_Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
 			// 
-			// tableLayoutPanel1
+			// TLP_Content
 			// 
-			this.tableLayoutPanel1.ColumnCount = 1;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-			this.tableLayoutPanel1.Controls.Add(this.myProgressBar4, 0, 7);
-			this.tableLayoutPanel1.Controls.Add(this.myProgressBar3, 0, 5);
-			this.tableLayoutPanel1.Controls.Add(this.myProgressBar2, 0, 3);
-			this.tableLayoutPanel1.Controls.Add(this.label4, 0, 6);
-			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
-			this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-			this.tableLayoutPanel1.Controls.Add(this.myProgressBar1, 0, 1);
-			this.tableLayoutPanel1.Controls.Add(this.flatButton1, 0, 8);
-			this.tableLayoutPanel1.Controls.Add(this.label3, 0, 4);
-			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 53);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 9;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(1132, 610);
-			this.tableLayoutPanel1.TabIndex = 1;
+			this.TLP_Content.ColumnCount = 1;
+			this.TLP_Content.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Content.Controls.Add(this.TLP_Apply_Bar, 0, 7);
+			this.TLP_Content.Controls.Add(this.TLP_SecondPass_Bar, 0, 5);
+			this.TLP_Content.Controls.Add(this.TLP_Folders_Bar, 0, 3);
+			this.TLP_Content.Controls.Add(this.TLP_Shortcuts_Bar, 0, 1);
+			this.TLP_Content.Controls.Add(this.TLP_Shortcuts_Top, 0, 0);
+			this.TLP_Content.Controls.Add(this.TLP_Folders_Top, 0, 2);
+			this.TLP_Content.Controls.Add(this.TLP_Apply_Top, 0, 6);
+			this.TLP_Content.Controls.Add(this.TLP_SecondPass_Top, 0, 4);
+			this.TLP_Content.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_Content.Location = new System.Drawing.Point(3, 53);
+			this.TLP_Content.Name = "TLP_Content";
+			this.TLP_Content.RowCount = 9;
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.TLP_Content.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+			this.TLP_Content.Size = new System.Drawing.Size(1132, 610);
+			this.TLP_Content.TabIndex = 1;
 			// 
-			// label1
+			// TLP_Apply_Bar
 			// 
-			this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(45, 13);
-			this.label1.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(182, 23);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Shortcut Matching:";
+			this.TLP_Apply_Bar.ColumnCount = 2;
+			this.TLP_Apply_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+			this.TLP_Apply_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Apply_Bar.Controls.Add(this.PB_Final, 0, 0);
+			this.TLP_Apply_Bar.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_Apply_Bar.Location = new System.Drawing.Point(3, 464);
+			this.TLP_Apply_Bar.Name = "TLP_Apply_Bar";
+			this.TLP_Apply_Bar.RowCount = 1;
+			this.TLP_Apply_Bar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Apply_Bar.Size = new System.Drawing.Size(1126, 81);
+			this.TLP_Apply_Bar.TabIndex = 11;
 			// 
-			// label2
+			// PB_Final
 			// 
-			this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(45, 150);
-			this.label2.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(165, 23);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Folder Matching:";
+			this.PB_Final.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.PB_Final.Image = global::Auto_Icons_3.Properties.Resources.GIF_Ring_W;
+			this.PB_Final.Location = new System.Drawing.Point(16, 24);
+			this.PB_Final.Name = "PB_Final";
+			this.PB_Final.Size = new System.Drawing.Size(32, 32);
+			this.PB_Final.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.PB_Final.TabIndex = 1;
+			this.PB_Final.TabStop = false;
+			this.PB_Final.Visible = false;
 			// 
-			// label3
+			// TLP_SecondPass_Bar
 			// 
-			this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(45, 287);
-			this.label3.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(192, 23);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Second Folder Pass:";
+			this.TLP_SecondPass_Bar.ColumnCount = 2;
+			this.TLP_SecondPass_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+			this.TLP_SecondPass_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_SecondPass_Bar.Controls.Add(this.PB_SecondPass, 0, 0);
+			this.TLP_SecondPass_Bar.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_SecondPass_Bar.Location = new System.Drawing.Point(3, 327);
+			this.TLP_SecondPass_Bar.Name = "TLP_SecondPass_Bar";
+			this.TLP_SecondPass_Bar.RowCount = 1;
+			this.TLP_SecondPass_Bar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_SecondPass_Bar.Size = new System.Drawing.Size(1126, 81);
+			this.TLP_SecondPass_Bar.TabIndex = 10;
 			// 
-			// label4
+			// PB_SecondPass
 			// 
-			this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(45, 424);
-			this.label4.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(188, 23);
-			this.label4.TabIndex = 3;
-			this.label4.Text = "Applying Changes:";
+			this.PB_SecondPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.PB_SecondPass.Image = global::Auto_Icons_3.Properties.Resources.GIF_Ring_W;
+			this.PB_SecondPass.Location = new System.Drawing.Point(16, 24);
+			this.PB_SecondPass.Name = "PB_SecondPass";
+			this.PB_SecondPass.Size = new System.Drawing.Size(32, 32);
+			this.PB_SecondPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.PB_SecondPass.TabIndex = 1;
+			this.PB_SecondPass.TabStop = false;
+			this.PB_SecondPass.Visible = false;
 			// 
-			// myProgressBar1
+			// TLP_Folders_Bar
 			// 
-			this.myProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.myProgressBar1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.myProgressBar1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.myProgressBar1.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-			this.myProgressBar1.Location = new System.Drawing.Point(60, 77);
-			this.myProgressBar1.Margin = new System.Windows.Forms.Padding(60, 10, 60, 10);
-			this.myProgressBar1.MaximumSize = new System.Drawing.Size(1500, 32);
-			this.myProgressBar1.MinStep = 0.5D;
-			this.myProgressBar1.Name = "myProgressBar1";
-			this.myProgressBar1.Percentage = 0D;
-			this.myProgressBar1.Scheme = Auto_Icons_3.ColorScheme.Active;
-			this.myProgressBar1.Size = new System.Drawing.Size(1012, 32);
-			this.myProgressBar1.TabIndex = 4;
+			this.TLP_Folders_Bar.ColumnCount = 2;
+			this.TLP_Folders_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+			this.TLP_Folders_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Folders_Bar.Controls.Add(this.PB_Folders, 0, 0);
+			this.TLP_Folders_Bar.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_Folders_Bar.Location = new System.Drawing.Point(3, 190);
+			this.TLP_Folders_Bar.Name = "TLP_Folders_Bar";
+			this.TLP_Folders_Bar.RowCount = 1;
+			this.TLP_Folders_Bar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Folders_Bar.Size = new System.Drawing.Size(1126, 81);
+			this.TLP_Folders_Bar.TabIndex = 9;
 			// 
-			// myProgressBar2
+			// PB_Folders
 			// 
-			this.myProgressBar2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.myProgressBar2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.myProgressBar2.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.myProgressBar2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-			this.myProgressBar2.Location = new System.Drawing.Point(60, 214);
-			this.myProgressBar2.Margin = new System.Windows.Forms.Padding(60, 10, 60, 10);
-			this.myProgressBar2.MaximumSize = new System.Drawing.Size(1500, 32);
-			this.myProgressBar2.MinStep = 0.5D;
-			this.myProgressBar2.Name = "myProgressBar2";
-			this.myProgressBar2.Percentage = 0D;
-			this.myProgressBar2.Scheme = Auto_Icons_3.ColorScheme.Active;
-			this.myProgressBar2.Size = new System.Drawing.Size(1012, 32);
-			this.myProgressBar2.TabIndex = 5;
+			this.PB_Folders.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.PB_Folders.Image = global::Auto_Icons_3.Properties.Resources.GIF_Ring_W;
+			this.PB_Folders.Location = new System.Drawing.Point(16, 24);
+			this.PB_Folders.Name = "PB_Folders";
+			this.PB_Folders.Size = new System.Drawing.Size(32, 32);
+			this.PB_Folders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.PB_Folders.TabIndex = 1;
+			this.PB_Folders.TabStop = false;
+			this.PB_Folders.Visible = false;
 			// 
-			// myProgressBar3
+			// TLP_Shortcuts_Bar
 			// 
-			this.myProgressBar3.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.myProgressBar3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.myProgressBar3.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.myProgressBar3.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-			this.myProgressBar3.Location = new System.Drawing.Point(60, 351);
-			this.myProgressBar3.Margin = new System.Windows.Forms.Padding(60, 10, 60, 10);
-			this.myProgressBar3.MaximumSize = new System.Drawing.Size(1500, 32);
-			this.myProgressBar3.MinStep = 0.5D;
-			this.myProgressBar3.Name = "myProgressBar3";
-			this.myProgressBar3.Percentage = 0D;
-			this.myProgressBar3.Scheme = Auto_Icons_3.ColorScheme.Active;
-			this.myProgressBar3.Size = new System.Drawing.Size(1012, 32);
-			this.myProgressBar3.TabIndex = 6;
+			this.TLP_Shortcuts_Bar.ColumnCount = 2;
+			this.TLP_Shortcuts_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+			this.TLP_Shortcuts_Bar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Shortcuts_Bar.Controls.Add(this.PB_Shortcuts, 0, 0);
+			this.TLP_Shortcuts_Bar.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_Shortcuts_Bar.Location = new System.Drawing.Point(3, 53);
+			this.TLP_Shortcuts_Bar.Name = "TLP_Shortcuts_Bar";
+			this.TLP_Shortcuts_Bar.RowCount = 1;
+			this.TLP_Shortcuts_Bar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Shortcuts_Bar.Size = new System.Drawing.Size(1126, 81);
+			this.TLP_Shortcuts_Bar.TabIndex = 8;
 			// 
-			// myProgressBar4
+			// PB_Shortcuts
 			// 
-			this.myProgressBar4.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.myProgressBar4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.myProgressBar4.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.myProgressBar4.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-			this.myProgressBar4.Location = new System.Drawing.Point(60, 488);
-			this.myProgressBar4.Margin = new System.Windows.Forms.Padding(60, 10, 60, 10);
-			this.myProgressBar4.MaximumSize = new System.Drawing.Size(1500, 32);
-			this.myProgressBar4.MinStep = 0.5D;
-			this.myProgressBar4.Name = "myProgressBar4";
-			this.myProgressBar4.Percentage = 0D;
-			this.myProgressBar4.Scheme = Auto_Icons_3.ColorScheme.Active;
-			this.myProgressBar4.Size = new System.Drawing.Size(1012, 32);
-			this.myProgressBar4.TabIndex = 7;
+			this.PB_Shortcuts.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.PB_Shortcuts.Image = global::Auto_Icons_3.Properties.Resources.GIF_Ring_W;
+			this.PB_Shortcuts.Location = new System.Drawing.Point(16, 24);
+			this.PB_Shortcuts.Name = "PB_Shortcuts";
+			this.PB_Shortcuts.Size = new System.Drawing.Size(32, 32);
+			this.PB_Shortcuts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.PB_Shortcuts.TabIndex = 1;
+			this.PB_Shortcuts.TabStop = false;
+			this.PB_Shortcuts.Visible = false;
 			// 
-			// flatButton1
+			// TLP_Shortcuts_Top
 			// 
-			this.flatButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.flatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.flatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(64)))));
-			this.flatButton1.BorderStyle = Auto_Icons_3.BorderStyle.Auto;
-			this.flatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.flatButton1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.flatButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
-			this.flatButton1.HueShade = null;
-			this.flatButton1.Image = global::Auto_Icons_3.Properties.Resources.Icon_Stop;
-			this.flatButton1.Location = new System.Drawing.Point(491, 559);
-			this.flatButton1.Name = "flatButton1";
-			this.flatButton1.Size = new System.Drawing.Size(150, 40);
-			this.flatButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.flatButton1.TabIndex = 8;
-			this.flatButton1.Text = "Abort";
+			this.TLP_Shortcuts_Top.ColumnCount = 2;
+			this.TLP_Shortcuts_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+			this.TLP_Shortcuts_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Shortcuts_Top.Controls.Add(this.L_Shortcuts_Info, 1, 0);
+			this.TLP_Shortcuts_Top.Controls.Add(this.L_Shortcuts, 0, 0);
+			this.TLP_Shortcuts_Top.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_Shortcuts_Top.Location = new System.Drawing.Point(3, 3);
+			this.TLP_Shortcuts_Top.Name = "TLP_Shortcuts_Top";
+			this.TLP_Shortcuts_Top.RowCount = 1;
+			this.TLP_Shortcuts_Top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Shortcuts_Top.Size = new System.Drawing.Size(1126, 44);
+			this.TLP_Shortcuts_Top.TabIndex = 4;
+			// 
+			// L_Shortcuts_Info
+			// 
+			this.L_Shortcuts_Info.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_Shortcuts_Info.AutoSize = true;
+			this.L_Shortcuts_Info.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_Shortcuts_Info.Location = new System.Drawing.Point(315, 13);
+			this.L_Shortcuts_Info.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+			this.L_Shortcuts_Info.Name = "L_Shortcuts_Info";
+			this.L_Shortcuts_Info.Size = new System.Drawing.Size(73, 18);
+			this.L_Shortcuts_Info.TabIndex = 1;
+			this.L_Shortcuts_Info.Text = "Waiting..";
+			// 
+			// L_Shortcuts
+			// 
+			this.L_Shortcuts.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_Shortcuts.AutoSize = true;
+			this.L_Shortcuts.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_Shortcuts.Location = new System.Drawing.Point(45, 10);
+			this.L_Shortcuts.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
+			this.L_Shortcuts.Name = "L_Shortcuts";
+			this.L_Shortcuts.Size = new System.Drawing.Size(182, 23);
+			this.L_Shortcuts.TabIndex = 0;
+			this.L_Shortcuts.Text = "Shortcut Matching:";
+			// 
+			// TLP_Folders_Top
+			// 
+			this.TLP_Folders_Top.ColumnCount = 2;
+			this.TLP_Folders_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+			this.TLP_Folders_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Folders_Top.Controls.Add(this.L_Folders_Info, 1, 0);
+			this.TLP_Folders_Top.Controls.Add(this.L_Folders, 0, 0);
+			this.TLP_Folders_Top.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_Folders_Top.Location = new System.Drawing.Point(3, 140);
+			this.TLP_Folders_Top.Name = "TLP_Folders_Top";
+			this.TLP_Folders_Top.RowCount = 1;
+			this.TLP_Folders_Top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Folders_Top.Size = new System.Drawing.Size(1126, 44);
+			this.TLP_Folders_Top.TabIndex = 5;
+			// 
+			// L_Folders_Info
+			// 
+			this.L_Folders_Info.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_Folders_Info.AutoSize = true;
+			this.L_Folders_Info.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_Folders_Info.Location = new System.Drawing.Point(315, 13);
+			this.L_Folders_Info.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+			this.L_Folders_Info.Name = "L_Folders_Info";
+			this.L_Folders_Info.Size = new System.Drawing.Size(73, 18);
+			this.L_Folders_Info.TabIndex = 2;
+			this.L_Folders_Info.Text = "Waiting..";
+			// 
+			// L_Folders
+			// 
+			this.L_Folders.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_Folders.AutoSize = true;
+			this.L_Folders.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_Folders.Location = new System.Drawing.Point(45, 10);
+			this.L_Folders.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
+			this.L_Folders.Name = "L_Folders";
+			this.L_Folders.Size = new System.Drawing.Size(165, 23);
+			this.L_Folders.TabIndex = 1;
+			this.L_Folders.Text = "Folder Matching:";
+			// 
+			// TLP_Apply_Top
+			// 
+			this.TLP_Apply_Top.ColumnCount = 2;
+			this.TLP_Apply_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+			this.TLP_Apply_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Apply_Top.Controls.Add(this.L_ApplyChanges_Info, 1, 0);
+			this.TLP_Apply_Top.Controls.Add(this.L_ApplyChanges, 0, 0);
+			this.TLP_Apply_Top.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_Apply_Top.Location = new System.Drawing.Point(3, 414);
+			this.TLP_Apply_Top.Name = "TLP_Apply_Top";
+			this.TLP_Apply_Top.RowCount = 1;
+			this.TLP_Apply_Top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_Apply_Top.Size = new System.Drawing.Size(1126, 44);
+			this.TLP_Apply_Top.TabIndex = 7;
+			// 
+			// L_ApplyChanges_Info
+			// 
+			this.L_ApplyChanges_Info.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_ApplyChanges_Info.AutoSize = true;
+			this.L_ApplyChanges_Info.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_ApplyChanges_Info.Location = new System.Drawing.Point(315, 13);
+			this.L_ApplyChanges_Info.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+			this.L_ApplyChanges_Info.Name = "L_ApplyChanges_Info";
+			this.L_ApplyChanges_Info.Size = new System.Drawing.Size(73, 18);
+			this.L_ApplyChanges_Info.TabIndex = 4;
+			this.L_ApplyChanges_Info.Text = "Waiting..";
+			// 
+			// L_ApplyChanges
+			// 
+			this.L_ApplyChanges.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_ApplyChanges.AutoSize = true;
+			this.L_ApplyChanges.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_ApplyChanges.Location = new System.Drawing.Point(45, 10);
+			this.L_ApplyChanges.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
+			this.L_ApplyChanges.Name = "L_ApplyChanges";
+			this.L_ApplyChanges.Size = new System.Drawing.Size(188, 23);
+			this.L_ApplyChanges.TabIndex = 3;
+			this.L_ApplyChanges.Text = "Applying Changes:";
+			// 
+			// TLP_SecondPass_Top
+			// 
+			this.TLP_SecondPass_Top.ColumnCount = 2;
+			this.TLP_SecondPass_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+			this.TLP_SecondPass_Top.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_SecondPass_Top.Controls.Add(this.L_SecondPass_Info, 1, 0);
+			this.TLP_SecondPass_Top.Controls.Add(this.L_SecondPass, 0, 0);
+			this.TLP_SecondPass_Top.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.TLP_SecondPass_Top.Location = new System.Drawing.Point(3, 277);
+			this.TLP_SecondPass_Top.Name = "TLP_SecondPass_Top";
+			this.TLP_SecondPass_Top.RowCount = 1;
+			this.TLP_SecondPass_Top.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+			this.TLP_SecondPass_Top.Size = new System.Drawing.Size(1126, 44);
+			this.TLP_SecondPass_Top.TabIndex = 6;
+			// 
+			// L_SecondPass_Info
+			// 
+			this.L_SecondPass_Info.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_SecondPass_Info.AutoSize = true;
+			this.L_SecondPass_Info.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_SecondPass_Info.Location = new System.Drawing.Point(315, 13);
+			this.L_SecondPass_Info.Margin = new System.Windows.Forms.Padding(15, 0, 3, 0);
+			this.L_SecondPass_Info.Name = "L_SecondPass_Info";
+			this.L_SecondPass_Info.Size = new System.Drawing.Size(73, 18);
+			this.L_SecondPass_Info.TabIndex = 3;
+			this.L_SecondPass_Info.Text = "Waiting..";
+			// 
+			// L_SecondPass
+			// 
+			this.L_SecondPass.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.L_SecondPass.AutoSize = true;
+			this.L_SecondPass.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.L_SecondPass.Location = new System.Drawing.Point(45, 10);
+			this.L_SecondPass.Margin = new System.Windows.Forms.Padding(45, 0, 3, 0);
+			this.L_SecondPass.Name = "L_SecondPass";
+			this.L_SecondPass.Size = new System.Drawing.Size(192, 23);
+			this.L_SecondPass.TabIndex = 2;
+			this.L_SecondPass.Text = "Second Folder Pass:";
 			// 
 			// WorkForm
 			// 
@@ -263,15 +480,42 @@
 			this.Font = new System.Drawing.Font("Century Gothic", 12F);
 			this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Margin = new System.Windows.Forms.Padding(5);
+			this.MinimumSize = new System.Drawing.Size(800, 500);
 			this.Name = "WorkForm";
 			this.Padding = new System.Windows.Forms.Padding(2);
+			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "Working...";
+			this.Activated += new System.EventHandler(this.Form_Activated);
+			this.Deactivate += new System.EventHandler(this.Form_Deactivate);
+			this.Load += new System.EventHandler(this.WorkForm_Load);
+			this.Resize += new System.EventHandler(this.WorkForm_Resize);
 			this.TLP_Main.ResumeLayout(false);
 			this.P_Title.ResumeLayout(false);
 			this.P_Title.PerformLayout();
-			this.tableLayoutPanel1.ResumeLayout(false);
-			this.tableLayoutPanel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.PB_Icon)).EndInit();
+			this.P_WindowControls.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.B_Close)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.B_Max)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.B_Min)).EndInit();
+			this.TLP_Content.ResumeLayout(false);
+			this.TLP_Apply_Bar.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.PB_Final)).EndInit();
+			this.TLP_SecondPass_Bar.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.PB_SecondPass)).EndInit();
+			this.TLP_Folders_Bar.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.PB_Folders)).EndInit();
+			this.TLP_Shortcuts_Bar.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.PB_Shortcuts)).EndInit();
+			this.TLP_Shortcuts_Top.ResumeLayout(false);
+			this.TLP_Shortcuts_Top.PerformLayout();
+			this.TLP_Folders_Top.ResumeLayout(false);
+			this.TLP_Folders_Top.PerformLayout();
+			this.TLP_Apply_Top.ResumeLayout(false);
+			this.TLP_Apply_Top.PerformLayout();
+			this.TLP_SecondPass_Top.ResumeLayout(false);
+			this.TLP_SecondPass_Top.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -280,17 +524,37 @@
 
 		private System.Windows.Forms.TableLayoutPanel TLP_Main;
 		private System.Windows.Forms.Panel P_Title;
-		private System.Windows.Forms.Panel P_WindowControls;
 		private System.Windows.Forms.Label L_Title;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-		private MyProgressBar myProgressBar4;
-		private MyProgressBar myProgressBar3;
-		private MyProgressBar myProgressBar2;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
-		private MyProgressBar myProgressBar1;
-		private FlatButton flatButton1;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TableLayoutPanel TLP_Content;
+		private System.Windows.Forms.Label L_ApplyChanges;
+		private System.Windows.Forms.Label L_Folders;
+		private System.Windows.Forms.Label L_Shortcuts;
+		private System.Windows.Forms.Label L_SecondPass;
+		private MyProgressBar PGB_Shortcuts;
+		private MyProgressBar PGB_Folders;
+		private MyProgressBar PGB_SecondPass;
+		private MyProgressBar PGB_ApplyChanges;
+		private System.Windows.Forms.Panel P_WindowControls;
+		private System.Windows.Forms.PictureBox B_Close;
+		private System.Windows.Forms.PictureBox B_Max;
+		private System.Windows.Forms.PictureBox B_Min;
+		private System.Windows.Forms.PictureBox PB_Icon;
+		private FlatButton B_Abort;
+		private System.Windows.Forms.TableLayoutPanel TLP_Shortcuts_Top;
+		private System.Windows.Forms.TableLayoutPanel TLP_Folders_Top;
+		private System.Windows.Forms.TableLayoutPanel TLP_Apply_Top;
+		private System.Windows.Forms.TableLayoutPanel TLP_SecondPass_Top;
+		private System.Windows.Forms.TableLayoutPanel TLP_Apply_Bar;
+		private System.Windows.Forms.PictureBox PB_Final;
+		private System.Windows.Forms.TableLayoutPanel TLP_SecondPass_Bar;
+		private System.Windows.Forms.PictureBox PB_SecondPass;
+		private System.Windows.Forms.TableLayoutPanel TLP_Folders_Bar;
+		private System.Windows.Forms.PictureBox PB_Folders;
+		private System.Windows.Forms.TableLayoutPanel TLP_Shortcuts_Bar;
+		private System.Windows.Forms.PictureBox PB_Shortcuts;
+		private System.Windows.Forms.Label L_Shortcuts_Info;
+		private System.Windows.Forms.Label L_Folders_Info;
+		private System.Windows.Forms.Label L_ApplyChanges_Info;
+		private System.Windows.Forms.Label L_SecondPass_Info;
 	}
 }

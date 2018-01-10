@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +31,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AutoIcons.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,14 +61,17 @@
     </Compile>
     <Compile Include="BackEndWorker.cs" />
     <Compile Include="Data.cs" />
+    <Compile Include="FileTypeCategory.cs" />
     <Compile Include="FlatButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FlatButton.Designer.cs">
       <DependentUpon>FlatButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Format.cs" />
     <Compile Include="IconFile.cs" />
     <Compile Include="IconMatcher.cs" />
+    <Compile Include="IconSynonyms.cs" />
     <Compile Include="IconType.cs" />
     <Compile Include="ItemFile.cs" />
     <Compile Include="MainForm.cs">
@@ -99,6 +107,7 @@
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="SessionData.cs" />
+    <Compile Include="TaskbarProgress.cs" />
     <Compile Include="TilePanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -198,6 +207,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoIcons.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

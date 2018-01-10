@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Extensions;
 
 namespace Auto_Icons_3
 {
@@ -51,7 +52,7 @@ namespace Auto_Icons_3
 		private void MyCheckBox_Load(object sender, EventArgs e)
 		{
 			label.ClickAction = new Action(OnClick);
-			label.ActiveColor = () => Data.Design.ActiveColor;
+			label.ActiveColor = () => FormDesign.Design.ActiveColor;
 			label.Text = _checked ? checkedText : uncheckedText;
 		}
 
